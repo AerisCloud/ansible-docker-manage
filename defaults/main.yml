@@ -1,0 +1,4 @@
+---
+# defaults file for ansible-docker-manage
+docker_networks: []
+docker_containers: []

@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Christophe Robin <crobin@nekoo.com>
+  description: Maintain docker containers, voluments and networks
+  company: Wizcorp Inc.
+  license: MIT
+  min_ansible_version: 2.2
+  galaxy_tags: ['docker', 'container', 'network']
+  platforms:
+  - name: GenericLinux
+    versions:
+    - all
+  - name: GenericBSD
+    versions:
+    - all
