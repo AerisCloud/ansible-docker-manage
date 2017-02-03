@@ -1,7 +1,7 @@
 ---
 # necessary for the rest of the module to work
 - name: "Make sure docker-py is installed"
-  package: name=python-docker state=latest
+  package: name={{docker_py_package[ansible_os_family] | default("python-docker")}} state=latest
 
 # copy files/folders
 - name: "Synchronize files/folders to be used by volumes for the containers"
