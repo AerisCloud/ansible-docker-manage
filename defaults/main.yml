@@ -2,6 +2,3 @@
 # defaults file for ansible-docker-manage
 docker_networks: []
 docker_containers: []
-docker_py_package:
-  RedHat: python-docker-py
-  Debian: python-docker

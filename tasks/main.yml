@@ -1,7 +1,19 @@
 ---
 # necessary for the rest of the module to work
-- name: "Make sure docker-py is installed"
-  package: name={{docker_py_package[ansible_os_family] | default("python-docker")}} state=latest
+- name: "Make sure python pip is available"
+  package: name=python-pip state=latest
+
+# we use pip since yum will fail if any of the dependencies of a python package was installed via pip
+- name: "Install docker-py"
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - docker-py
+    - requests
+    - urllib3
+    - pyopenssl
+    - ndg-httpsclient
 
 # copy files/folders
 - name: "Synchronize files/folders to be used by volumes for the containers"
