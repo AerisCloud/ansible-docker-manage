@@ -6,7 +6,13 @@ Manager networks, containers and volume files purely through inventory.
 Requirements
 ------------
 
-Docker running somewhere.
+The same requirements as the docker_container role: http://docs.ansible.com/ansible/docker_container_module.html#docker-container
+
+Currently:
+
+* python >= 2.6
+* docker-py >= 1.7.0
+* Docker API >= 1.20
 
 Role Variables
 --------------
